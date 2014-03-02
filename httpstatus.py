@@ -11,7 +11,16 @@ class InternalError(HTTPError):
         headers = {'Content-Type': 'text/html'}
         HTTPError.__init__(self, status, headers, message or self.message)
         
-internalerror = InternalError        
+internalerror = InternalError    
+
+class DefaultError(HTTPError):
+    """default Error`."""
+    message = "default server error"
+    def __init__(self, status, message=None):
+        headers = {'Content-Type': 'text/html'}
+        HTTPError.__init__(self, status, headers, message or self.message)
+            
+defaulterror = DefaultError
 httpstatus = {
               200 : web.ok, 
               201 : web.created, 
