@@ -1,8 +1,6 @@
-url设计改造
+多代理支持
 ===
-httpproxyset参数存在则进入代理设置界面
-httpproxystep参数存在则进入代理步骤设置界面，保存成id
-httpproxyexec参数存在则加载前置步骤进行代理请求操作
+根据请求的host那么来进行目标代理
 
 代理设置页
 ===
